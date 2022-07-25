@@ -39,10 +39,9 @@ ThemeData getWebTheme(BuildContext context) {
     textTheme: TextTheme(
       headline2:
           WebFontStyle().getRegularStyle(color: Colors.black, size: 81.sp),
-      headline3:
-          WebFontStyle().getBoldStyle(color: Colors.black, size: 54.sp),
-      headline4:
-          WebFontStyle().getRegularStyle(color: Colors.black, size: 46.sp),
+      headline3: WebFontStyle().getBoldStyle(color: Colors.black, size: 54.sp),
+      headline4: WebFontStyle()
+          .getRegularStyle(color: Colors.black, size: ScreenUtil().setSp(46)),
       headline5:
           WebFontStyle().getRegularStyle(color: Colors.black, size: 40.sp),
       bodyText1:

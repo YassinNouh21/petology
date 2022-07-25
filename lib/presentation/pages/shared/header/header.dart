@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:petology/presentation/pages/shared/header/header_elevated_button.dart';
-import 'package:petology/presentation/pages/shared/header/header_text_button.dart';
+import 'package:petology/presentation/pages/shared/web_button/header_text_button.dart';
 import 'package:petology/presentation/resources/theme/web_gradient.dart';
 import 'package:petology/presentation/resources/theme/web_strings.dart';
 
