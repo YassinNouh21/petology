@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:petology/presentation/resources/routes/web_generate_route.dart';
+import 'package:petology/presentation/resources/routes/web_route_names.dart';
 
 class MyApp extends StatelessWidget {
   static const instance = MyApp._private();
@@ -9,6 +11,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
+      
+      initialRoute: WebRouteNames.signInRoute,
+      onGenerateRoute: WebGenerateRoute().generateRoute,
     );
   }
 }
