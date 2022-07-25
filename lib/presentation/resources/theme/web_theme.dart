@@ -5,7 +5,6 @@ import 'package:petology/presentation/resources/theme/web_font_style.dart';
 
 ThemeData getWebTheme(BuildContext context) {
   return ThemeData(
-    primarySwatch: Colors.blue,
     primaryColor: WebColor.primaryColor,
     scaffoldBackgroundColor: Colors.white,
     colorScheme: const ColorScheme(
@@ -41,7 +40,7 @@ ThemeData getWebTheme(BuildContext context) {
       headline2:
           WebFontStyle().getRegularStyle(color: Colors.black, size: 81.sp),
       headline3:
-          WebFontStyle().getRegularStyle(color: Colors.black, size: 54.sp),
+          WebFontStyle().getBoldStyle(color: Colors.black, size: 54.sp),
       headline4:
           WebFontStyle().getRegularStyle(color: Colors.black, size: 46.sp),
       headline5:
