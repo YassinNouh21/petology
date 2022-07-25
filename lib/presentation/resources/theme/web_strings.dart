@@ -21,9 +21,10 @@ class WebSignInString {
   static const String password = 'Password';
   static const String forgetPassword = 'Forget password?';
   static const String phoneNumber = '(+2)0123456789';
-  static const String or = 'or';
+  static const String or = 'Or';
   static const String facebook = 'Facebook';
   static const String google = 'Google';
   static const String email = 'Email';
-  static const String didChange = "Didn't have an account? sign up";
+  static const String didChange = "Didn't have an account?";
+  static const String signUp= "Sign Up";
 }
