@@ -11,4 +11,7 @@ class WebColor {
   static const backgroundColor = Color(0xFFFFFFFF);
   static const surfaceColor = Color(0xFFEAEAEA);
   static const onFooterColor = Color(0xFFAE957B);
+  static const errorColor = Color(0xFFB00020);
+  static const onErrorColor = Color(0xFFFFFFFF);
+  static const onSurfaceColor = Color(0xFFE1E1E1);
 }

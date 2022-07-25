@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:petology/presentation/resources/routes/web_generate_route.dart';
 import 'package:petology/presentation/resources/routes/web_route_names.dart';
 
@@ -8,12 +10,16 @@ class MyApp extends StatelessWidget {
   factory MyApp() => instance;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(),
-      
-      initialRoute: WebRouteNames.signInRoute,
-      onGenerateRoute: WebGenerateRoute().generateRoute,
+    return ScreenUtilInit(
+      designSize: const Size(1920, 2510),
+      builder: (BuildContext context, Widget? child) {
+        return MaterialApp(
+          title: 'Petology',
+          theme: ThemeData(),
+          initialRoute: WebRouteNames.signInRoute,
+          onGenerateRoute: WebGenerateRoute().generateRoute,
+        );
+      },
     );
   }
 }
