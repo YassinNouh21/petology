@@ -26,46 +26,56 @@ class SignInPage extends StatelessWidget {
           children: [
             Header(),
             SizedBox(height: 440.h),
-            Container(
-              width: 1150.w,
-              padding: EdgeInsets.symmetric(horizontal: 90.w),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(90.r),
-                border: Border.all(color: WebColor.primaryColor, width: 3.r),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const SizedBox(width: double.infinity),
-                  SizedBox(height: 70.h),
-                  Text(
-                    WebSignInString.login,
-                    style: Theme.of(context).textTheme.headline3!.copyWith(
-                          color: WebColor.primaryColor,
+            Row(
+              children: [
+                Expanded(flex: 2, child: Container()),
+                Expanded(
+                  flex: 3,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 90.w),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(90.r),
+                      border:
+                          Border.all(color: WebColor.primaryColor, width: 3.r),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const SizedBox(width: double.infinity),
+                        SizedBox(height: 70.h),
+                        Text(
+                          WebSignInString.login,
+                          style:
+                              Theme.of(context).textTheme.headline3!.copyWith(
+                                    color: WebColor.primaryColor,
+                                  ),
                         ),
+                        SizedBox(height: 55.h),
+                        const SignForm(),
+                        SizedBox(
+                          height: 90.h,
+                        ),
+                        WebButton.large(
+                          color: WebColor.primaryColor,
+                          onPressed: () {},
+                          text: WebSignInString.login,
+                        ),
+                        SizedBox(
+                          height: 30.h,
+                        ),
+                        const ForotPasswordContainer(),
+                        const Spliter(),
+                        SizedBox(height: 90.h),
+                        const OptionalSignButtonContainer(),
+                        SizedBox(height: 55.h),
+                        const SignUpContainer(),
+                        SizedBox(height: 105.h),
+                      ],
+                    ),
                   ),
-                  SizedBox(height: 55.h),
-                  const SignForm(),
-                  SizedBox(
-                    height: 90.h,
-                  ),
-                  WebButton.large(
-                    color: WebColor.primaryColor,
-                    onPressed: () {},
-                    text: WebSignInString.login,
-                  ),
-                  SizedBox(
-                    height: 30.h,
-                  ),
-                  const ForotPasswordContainer(),
-                  const Spliter(),
-                  SizedBox(height: 90.h),
-                  const OptionalSignButtonContainer(),
-                  SizedBox(height: 55.h),
-                  const SignUpContainer(),
-                  SizedBox(height: 105.h),
-                ],
-              ),
+                ),
+                Expanded(flex: 2, child: Container()),
+              ],
             ),
             SizedBox(height: 160.h),
           ],
