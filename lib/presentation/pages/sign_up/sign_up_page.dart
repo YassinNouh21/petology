@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:petology/infrastructure/static/static_service.dart';
 import 'package:petology/presentation/pages/shared/header/header.dart';
 import 'package:petology/presentation/pages/shared/web_button/forget_password_text_button.dart';
 import 'package:petology/presentation/pages/shared/web_button/header_text_button.dart';
@@ -13,8 +14,21 @@ import 'package:petology/presentation/resources/theme/web_strings.dart';
 
 import '../../resources/theme/web_color.dart';
 
-class SignUpPage extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
+
+  @override
+  State<SignUpPage> createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
+
+
+  @override
+  void initState() {
+    print(StaticService().getListPetNeeds().then((value) => print(value)));
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
