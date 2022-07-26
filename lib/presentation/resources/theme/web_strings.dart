@@ -26,5 +26,17 @@ class WebSignInString {
   static const String google = 'Google';
   static const String email = 'Email';
   static const String didChange = "Didn't have an account?";
-  static const String signUp= "Sign Up";
+  static const String signUp = "Sign Up";
+}
+
+class WebSignUpString {
+  static const String signUp = 'Sign up';
+  static const String firstName = 'First Name';
+  static const String lastName = 'Last Name';
+  static const String email = 'Email';
+  static const String password = 'Password';
+  static const String rePassword = 'Re-enter Password';
+  static const String country = 'Country';
+  static const String alreadyHaveAccount = 'Already have an account?';
+  static const String login = "Login";
 }

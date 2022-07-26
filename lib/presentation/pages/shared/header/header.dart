@@ -6,7 +6,8 @@ import 'package:petology/presentation/pages/shared/web_button/header_text_button
 import 'package:petology/presentation/resources/theme/web_gradient.dart';
 import 'package:petology/presentation/resources/theme/web_strings.dart';
 
-import '../../../resources/theme/web_assets.dart';
+import '../../../resources/theme/web_asset.dart';
+
 // FIXME: Padding problem 
 class Header extends StatelessWidget {
   const Header({Key? key}) : super(key: key);
@@ -18,11 +19,11 @@ class Header extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 50.w, vertical: 50.h),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SvgPicture.asset(
               WebAsset.petologyIcon,
-              width: 45.w,
+              width: 140.w,
             ),
             SizedBox(
               width: 300.w,

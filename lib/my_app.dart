@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:petology/presentation/resources/routes/web_generate_route.dart';
 import 'package:petology/presentation/resources/routes/web_route_names.dart';
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'Petology',
           theme: ThemeData(),
-          initialRoute: WebRouteNames.signInRoute,
+          initialRoute: WebRouteNames.signUpRoute,
           onGenerateRoute: WebGenerateRoute().generateRoute,
         );
       },

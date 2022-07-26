@@ -16,7 +16,6 @@ dependencies:
   flutter_screenutil: ^5.5.3+2
   flutter_svg: ^1.1.1+1
   bloc: ^8.0.3
-  
 
 dev_dependencies:
   flutter_test:
@@ -28,17 +27,17 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-assets:
-  - assets/icons
+  assets:
+    - assets/icons/
 
   # example:
-fonts:
-  - family: Arial
-    fonts:
-      - asset: assets/fonts/arial_bold.ttf
-        style: bold
-      - asset: assets/fonts/arial.ttf
-        style: 400
+  fonts:
+    - family: Arial
+      fonts:
+        - asset: assets/fonts/arial/arial_bold.ttf
+          weight: 700
+        - asset: assets/fonts/arial/arial.ttf
+          weight: 400
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

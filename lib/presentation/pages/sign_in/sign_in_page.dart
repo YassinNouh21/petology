@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:petology/presentation/pages/shared/sign_form/sign_form.dart';
-import 'package:petology/presentation/pages/shared/web_button/forget_password_text_button.dart';
-import 'package:petology/presentation/pages/shared/web_button/google_button.dart';
 import 'package:petology/presentation/pages/shared/web_button/sign_button.dart';
 import 'package:petology/presentation/pages/sign_in/widgets/forgot_password_container.dart';
 import 'package:petology/presentation/pages/sign_in/widgets/optional_sign_button_container.dart';
+import 'package:petology/presentation/pages/sign_in/widgets/sign_in_form.dart';
 import 'package:petology/presentation/pages/sign_in/widgets/sign_up_container.dart';
 import 'package:petology/presentation/pages/sign_in/widgets/spliter.dart';
-import 'package:petology/presentation/resources/routes/web_route_names.dart';
 import 'package:petology/presentation/resources/theme/web_color.dart';
 
 import '../../resources/theme/web_strings.dart';
 import '../shared/header/header.dart';
-import '../shared/web_button/facebook_button.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -51,7 +47,7 @@ class SignInPage extends StatelessWidget {
                                   ),
                         ),
                         SizedBox(height: 55.h),
-                        const SignForm(),
+                        const SignInForm(),
                         SizedBox(
                           height: 90.h,
                         ),
