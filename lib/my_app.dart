@@ -9,7 +9,6 @@ class MyApp extends StatelessWidget {
   factory MyApp() => instance;
   @override
   Widget build(BuildContext context) {
-    
     return ScreenUtilInit(
       minTextAdapt: true,
       splitScreenMode: true,

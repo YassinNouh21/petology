@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:petology/application/services_cubit/static_service/static_service_cubit.dart';
+import 'package:petology/injectable.dart';
+import 'package:bloc/bloc.dart';
+
 import 'package:petology/presentation/pages/about_us/about_us_page.dart';
 import 'package:petology/presentation/pages/adaptation/adaptation_page.dart';
 import 'package:petology/presentation/pages/adaptation_info/adaptation_info_page.dart';
@@ -18,9 +23,18 @@ class WebGenerateRoute {
       case WebRouteNames.signInRoute:
         return MaterialPageRoute(builder: (_) => SignInPage());
       case WebRouteNames.signUpRoute:
-        return MaterialPageRoute(builder: (_) => SignUpPage());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (_) => getIt<StaticServiceCubit>(),
+                  child: SignUpPage(),
+                ));
+      
       case WebRouteNames.aboutUsRoute:
-        return MaterialPageRoute(builder: (_) => AboutUsPage());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (_) => getIt<StaticServiceCubit>(),
+                  child: AboutUsPage(),
+                ));
       case WebRouteNames.petInfoRoute:
         return MaterialPageRoute(builder: (_) => PetInfoPage());
       case WebRouteNames.serviceRoute:

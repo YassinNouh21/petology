@@ -18,10 +18,15 @@ dependencies:
   bloc: ^8.0.3
   equatable: ^2.0.3
   dio: ^4.0.6
+  injectable: ^1.5.3
+  get_it: ^7.2.0
+  flutter_bloc: ^8.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  injectable_generator:
+  build_runner:
 
   flutter_lints: ^2.0.0
 

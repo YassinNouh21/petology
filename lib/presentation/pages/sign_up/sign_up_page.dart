@@ -1,14 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:petology/application/services_cubit/static_service/static_service_cubit.dart';
 import 'package:petology/infrastructure/static/static_service.dart';
 import 'package:petology/presentation/pages/shared/header/header.dart';
 import 'package:petology/presentation/pages/shared/web_button/forget_password_text_button.dart';
 import 'package:petology/presentation/pages/shared/web_button/header_text_button.dart';
+import 'package:petology/presentation/pages/shared/web_button/sign_button.dart';
 import 'package:petology/presentation/pages/sign_in/widgets/optional_sign_button_container.dart';
 import 'package:petology/presentation/pages/sign_in/widgets/spliter.dart';
 import 'package:petology/presentation/pages/sign_up/widgets/sign_up_form.dart';
+import 'package:petology/presentation/resources/routes/web_route_names.dart';
 import 'package:petology/presentation/resources/theme/web_asset.dart';
 import 'package:petology/presentation/resources/theme/web_strings.dart';
 
@@ -22,14 +26,6 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-
-
-  @override
-  void initState() {
-    print(StaticService().getListPetNeeds().then((value) => print(value)));
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,7 +75,10 @@ class _SignUpPageState extends State<SignUpPage> {
                                     .headline5!
                                     .copyWith(color: WebColor.primaryColor)),
                             ForgetPasswordTextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(
+                                    context, WebRouteNames.aboutUsRoute);
+                              },
                               text: WebSignUpString.signUp,
                               textSize: 42.sp,
                             ),

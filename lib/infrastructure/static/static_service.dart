@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
 import 'package:petology/domain/core/static_model.dart';
 import 'package:petology/domain/static/models/first_section_model.dart';
 import 'package:petology/domain/static/models/footer_model.dart';
@@ -10,6 +11,7 @@ import 'package:petology/domain/static/static_service_interface.dart';
 import 'package:petology/infrastructure/core/server_consts.dart';
 import 'package:petology/infrastructure/core/service_exceptions..dart';
 
+@LazySingleton(as: StaticServiceInterface)
 class StaticService implements StaticServiceInterface {
   StaticService();
   final Dio _dio = Dio(
@@ -39,7 +41,10 @@ class StaticService implements StaticServiceInterface {
           await _dio.get(footer).then((value) => Footer.fromMap(value.data));
       return response;
     } on DioError catch (e) {
-      throw DioExceptions.fromDioError(e);
+      print("service error catch");
+      rethrow;
+    } catch (e) {
+      print(e.toString());
     }
   }
 
@@ -67,6 +72,7 @@ class StaticService implements StaticServiceInterface {
       throw DioExceptions.fromDioError(e);
     }
   }
+
 // TODO: implement getStaticById
   @override
   Future getStaticById(String id) {
