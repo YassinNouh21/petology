@@ -13,7 +13,6 @@ import 'package:petology/infrastructure/core/service_exceptions..dart';
 
 @LazySingleton(as: StaticServiceInterface)
 class StaticService implements StaticServiceInterface {
-  StaticService();
   final Dio _dio = Dio(
     BaseOptions(
       baseUrl: baseUrl,
