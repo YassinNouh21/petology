@@ -18,4 +18,7 @@ class WebAsset{
   static const String transportationIcon = "assets/icons/transportation-icon.svg";
   static const String toyIcon = "assets/icons/toy-icon.svg";
   static const String vitaminsIcon = "assets/icons/vitamins-icon.svg";
+
+  static const String dogIamge = "assets/image/dog.png";
+  static const String dogAndCatIamge = "assets/image/cat_and_dog.png";
 }

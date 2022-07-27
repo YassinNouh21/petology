@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'Petology',
           theme: ThemeData(),
-          initialRoute: WebRouteNames.signUpRoute,
+          initialRoute: WebRouteNames.aboutUsRoute,
           onGenerateRoute: WebGenerateRoute().generateRoute,
         );
       },

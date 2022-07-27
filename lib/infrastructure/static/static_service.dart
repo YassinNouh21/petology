@@ -30,7 +30,7 @@ class StaticService implements StaticServiceInterface {
           .then((value) => FirstSection.fromMap(value.data));
       return response;
     } on DioError catch (e) {
-      throw DioExceptions.fromDioError(e);
+      rethrow;
     }
   }
 
@@ -41,10 +41,9 @@ class StaticService implements StaticServiceInterface {
           await _dio.get(footer).then((value) => Footer.fromMap(value.data));
       return response;
     } on DioError catch (e) {
-      print("service error catch");
       rethrow;
     } catch (e) {
-      print(e.toString());
+      rethrow;
     }
   }
 
@@ -57,7 +56,9 @@ class StaticService implements StaticServiceInterface {
 
       return response;
     } on DioError catch (e) {
-      throw DioExceptions.fromDioError(e);
+      rethrow;
+    } catch (e) {
+      rethrow;
     }
   }
 
@@ -68,8 +69,10 @@ class StaticService implements StaticServiceInterface {
           .get(secondSection)
           .then((value) => SecondSection.fromMap(value.data));
       return response;
-    } on DioError catch (e) {
-      throw DioExceptions.fromDioError(e);
+    } on DioError {
+      rethrow;
+    } catch (e) {
+      rethrow;
     }
   }
 

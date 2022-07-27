@@ -11,7 +11,7 @@ class StaticServiceState extends Equatable {
   final String error;
   final bool isLoading;
   final RequestType requestType;
-  final Static static;
+  final dynamic static;
 
   const StaticServiceState({
     required this.error,
@@ -29,7 +29,7 @@ class StaticServiceState extends Equatable {
     String? error,
     bool? isLoading,
     RequestType? requestType,
-    Static? static,
+    dynamic static,
   }) {
     return StaticServiceState(
       error: error ?? this.error,
@@ -39,6 +39,7 @@ class StaticServiceState extends Equatable {
     );
   }
 
+  bool get isFailure => error.isNotEmpty;
   @override
   List<Object?> get props => [error, isLoading, requestType, static];
 }

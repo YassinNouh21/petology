@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:petology/presentation/pages/about_us/widgets/first_section_container.dart';
+import 'package:petology/presentation/pages/about_us/widgets/pets_needs/bowl_container.dart';
+import 'package:petology/presentation/pages/about_us/widgets/pets_needs/pets_needs_container.dart';
+import 'package:petology/presentation/pages/about_us/widgets/second_section_container.dart';
+import 'package:petology/presentation/pages/shared/header/header.dart';
 
 import '../../../application/services_cubit/static_service/static_service_cubit.dart';
 
@@ -13,17 +19,25 @@ class AboutUsPage extends StatefulWidget {
 class _AboutUsPageState extends State<AboutUsPage> {
   @override
   void initState() {
-    BlocProvider.of<StaticServiceCubit>(context).getFooterSection();
+    BlocProvider.of<StaticServiceCubit>(context).getFirstSection();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          
-        ],
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const Header(),
+            const FirstSectionContainer(),
+            const SecondSectioncontainer(),
+            SizedBox(height: 150.h),
+            PetsNeedsContainer(),
+            SizedBox(height: 100.h),
+          ],
+        ),
       ),
     );
   }

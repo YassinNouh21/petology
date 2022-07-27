@@ -40,3 +40,9 @@ class WebSignUpString {
   static const String alreadyHaveAccount = 'Already have an account?';
   static const String login = "Login";
 }
+
+class WebAboutUs {
+  static const String helpThem = "Help Them";
+  static const String howToTakeCare = '''How to take care of
+ your friends? ''';
+}
