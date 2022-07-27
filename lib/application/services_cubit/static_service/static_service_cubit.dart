@@ -64,6 +64,11 @@ class StaticServiceCubit extends Cubit<StaticServiceState> {
         isLoading: false,
         error: DioExceptions.fromDioError(e).toString(),
       ));
+    } catch (e) {
+      emit(state.copyWith(
+        isLoading: false,
+        error: e.toString(),
+      ));
     }
   }
 

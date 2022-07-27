@@ -7,9 +7,13 @@ import '../../../resources/theme/web_color.dart';
 
 class SignTextField extends StatefulWidget {
   final String label;
+  final String? Function(String?)? validator;
+  final Function(String)? onChange;
   const SignTextField({
     Key? key,
     required this.label,
+    this.validator,
+    required this.onChange,
   }) : super(key: key);
 
   @override
@@ -35,6 +39,8 @@ class _SignTextFieldState extends State<SignTextField> {
       child: SizedBox(
         width: 1000.w,
         child: TextFormField(
+          validator: widget.validator,
+          onChanged: widget.onChange,
           decoration: InputDecoration(
             hintText: widget.label,
             hintStyle: Theme.of(context).textTheme.labelSmall!.copyWith(

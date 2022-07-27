@@ -40,7 +40,6 @@ class PetsNeedsContainer extends StatelessWidget {
             SizedBox(height: 150.h),
             BlocBuilder<StaticServiceCubit, StaticServiceState>(
               builder: (context, state) {
-                print(state.static);
                 if (state.isLoading) {
                   return const CircularProgressIndicator();
                 } else if (state.isFailure) {
